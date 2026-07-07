@@ -8,15 +8,18 @@ function Inicio() {
   const [montoTotal,     setMontoTotal]     = useState(0)
 
   useEffect(() => {
-    fetch('http://localhost:8000/clientes/')
+    //fetch('http://localhost:8000/clientes/')
+    fetch('https://fastapi-postgres-crud.onrender.com/clientes/')
       .then(r => r.json())
       .then(data => setTotalClientes(data.length))
 
-    fetch('http://localhost:8000/productos/')
+   // fetch('http://localhost:8000/productos/')
+   fetch('https://fastapi-postgres-crud.onrender.com/productos/')
       .then(r => r.json())
       .then(data => setTotalProductos(data.length))
 
-    fetch('http://localhost:8000/ventas/')
+    //fetch('http://localhost:8000/ventas/')
+    fetch('https://fastapi-postgres-crud.onrender.com/ventas/')
       .then(r => r.json())
       .then(data => {
         setTotalVentas(data.length)

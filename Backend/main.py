@@ -25,7 +25,10 @@ app = FastAPI(
 # CORS: permite que React (semana-10-F) consuma esta API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    #allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    
+    allow_origins=["http://localhost:5173", "http://localhost:3000", "https://gestiopro-frontend.onrender.com"],
+
     allow_methods=["*"],   # permite GET, POST, PUT, DELETE, etc.
     allow_headers=["*"],   # permite cualquier cabecera HTTP
 )

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 
-const API = 'http://localhost:8000/productos'
+//const API = 'http://localhost:8000/productos'
+const API = 'https://fastapi-postgres-crud.onrender.com/productos'
+
 
 function Productos({ agregarLog }) {
   const [productos,       setProductos]       = useState([])

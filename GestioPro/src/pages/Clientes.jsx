@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react'
 import ClienteCard from '../components/ClienteCard'
 import ClienteForm from '../components/ClienteForm'
 
-const API = 'http://localhost:8000/clientes'
+//const API = 'http://localhost:8000/clientes'
+const API = 'https://fastapi-postgres-crud.onrender.com/clientes'
+
 
 function Clientes({ agregarLog }) {
   const [clientes,      setClientes]      = useState([])
@@ -13,7 +15,11 @@ function Clientes({ agregarLog }) {
 
   useEffect(() => {
     cargarClientes()
-    fetch('http://localhost:8000/ventas/').then(r => r.json()).then(setVentas)
+    //fetch('http://localhost:8000/ventas/').then(r => r.json()).then(setVentas)
+
+  fetch('https://fastapi-postgres-crud.onrender.com/ventas/').then(r => r.json()).then(setVentas)
+
+
   }, [])
 
   const cargarClientes = () => {
