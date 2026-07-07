@@ -1,0 +1,5 @@
+**/__pycache__/
+*.pyc
+Backend/.env
+GestioPro/node_modules/
+GestioPro/dist/
